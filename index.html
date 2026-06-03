@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stop Typos in Your Browser IDE: The Best Spell Checker for VS Code Web Environments</title>
+<meta name="description" content="Find the best spell checker for VS Code web environments. Compare privacy, grammar, and multilingual support for browser-based coding.">
+<link rel="canonical" href="https://belikenative.com/best-spell-checker-vs-code-web-environments/">
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.7;color:#333;background:#fff}
+h1{font-size:1.8em;line-height:1.3;margin-bottom:8px}
+h2{font-size:1.4em;margin-top:32px}
+h3{font-size:1.2em;margin-top:24px}
+p{margin:16px 0}
+a{color:#2563eb;text-decoration:none}
+a:hover{text-decoration:underline}
+ul{padding-left:24px}
+li{margin:8px 0}
+.source{color:#666;font-size:14px;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid #eee}
+.footer{margin-top:40px;padding-top:20px;border-top:1px solid #eee;color:#666;font-size:14px}
+</style>
+</head>
+<body>
+<article>
+<h1>Stop Typos in Your Browser IDE: The Best Spell Checker for VS Code Web Environments</h1>
+<div class="source">Originally published at <a href="https://belikenative.com/best-spell-checker-vs-code-web-environments/">belikenative.com/best-spell-checker-vs-code-web-environments</a></div>
+<p>I'll be honest—I didn't think I needed a spell checker in VS Code until I pushed a commit with "recieved" in a variable name. My team noticed. I learned my lesson.</p>
+<p>If you're coding in a browser-based VS Code environment—whether it's GitHub Codespaces, Gitpod, or the vscode.dev web client—you've probably run into the same problem. Desktop extensions don't always work the same way in the cloud. And spell checkers? They're surprisingly tricky to get right when you're working with code, not prose.</p>
+<p>So let's talk about what actually works when you need to catch typos in code without sacrificing privacy, performance, or your sanity.</p>
+<h2>Why Browser-Based VS Code Changes the Game</h2>
+<p>Here's the thing about web environments: they're sandboxed. That means extensions can't always access your local file system or run background processes the same way they would on desktop. Traditional spell checkers rely on dictionaries stored locally, but in the cloud, you're often stuck with whatever the extension author baked in.</p>
+<p>Plus, there's the privacy angle. When you're coding on someone else's machine—or in a browser tab that could theoretically be monitored—you probably don't want your spelling suggestions bouncing through some third-party server. A good spell checker for VS Code web environments should handle everything client-side.</p>
+<p>I've tested half a dozen options, and here are the ones that actually deliver.</p>
+<h2>The Top Contenders for Code-Aware Spell Checking</h2>
+<h3>1. Code Spell Checker (by Street Side Software)</h3>
+<p>This is the one I keep coming back to. It's open source, works entirely offline, and understands that "const" and "typeof" aren't misspellings. The extension ships with a solid English dictionary, but you can add custom words, ignore specific file types, and even set up per-project dictionaries.</p>
+<p>What makes it shine in web environments? It doesn't phone home. No data leaves your browser. And it's lightweight—no noticeable lag, even in larger projects.</p>
+<p>The catch? Grammar support is basic. It'll flag "teh" but won't tell you if your sentence structure is awkward. If you need more than spelling, you'll want something else alongside it.</p>
+<h3>2. LTeX – LanguageTool for VS Code</h3>
+<p>If grammar matters as much as spelling, LTeX is worth a look. It uses LanguageTool under the hood, which means it catches style issues, passive voice, and even some readability problems. It supports multiple languages—Spanish, French, German, you name it.</p>
+<p>In a web environment, LTeX runs as a local server inside your browser. That means it's still private, but it does use more resources. I've noticed some lag in larger files, especially on slower machines. Still, if you're writing documentation, comments, or commit messages that need to sound professional, it's hard to beat.</p>
+<p>The downside? It's not as code-aware as Code Spell Checker. You'll get false positives on variable names and function calls. You'll need to configure it to ignore certain patterns.</p>
+<h3>3. GitHub Copilot&#x27;s Built-In Spell Checker</h3>
+<p>If you're using GitHub Codespaces, you might already have this one. Copilot includes a basic spell checker that highlights typos in comments and strings. It's not as configurable as the others, but it's zero-effort—no installation, no setup.</p>
+<p>The catch is that it's tied to Copilot. If you're not paying for that, you won't get the feature. And it's not available in other web environments like Gitpod.</p>
+<h2>What About Grammar and Multilingual Support?</h2>
+<p>Here's where things get interesting. Most spell checkers for code environments treat grammar like an afterthought. They'll catch "their" vs "there" in comments, but they won't help you write clearer documentation or avoid awkward phrasing in your README.</p>
+<p>If you're writing in multiple languages—say, English code comments with Japanese variable names—you need something that handles both without breaking. Code Spell Checker supports multiple dictionaries, but you have to install each one separately. LTeX handles multiple languages more gracefully, but again, it's heavier.</p>
+<p>For a balanced approach, I pair Code Spell Checker with a separate grammar tool. Something like the <a href="https://belikenative.com/">BeLikeNative</a> platform works great for polishing documentation, commit messages, or even inline comments before you push. It's not an extension, but it fills the grammar gap nicely.</p>
+<h2>Privacy Considerations You Can&#x27;t Ignore</h2>
+<p>Let me be blunt: not all spell checkers are created equal when it comes to privacy. Some rely on cloud APIs to process text. That's fine for personal projects, but if you're working on proprietary code, you probably don't want your variable names floating around on someone else's server.</p>
+<p>The safest bet is to stick with extensions that run entirely locally. Code Spell Checker and LTeX (in its local mode) are both good choices. Avoid anything that requires an API key or sends data to an external service unless you're absolutely sure about their data handling.</p>
+<p>If you're curious about the best options for your specific setup, I wrote a detailed comparison on the <a href="https://belikenative.com/best-spell-checker-vs-code-web-environments/">Best Spell Checker For VS Code Web Environments</a> page that breaks down each tool's privacy policies and performance benchmarks.</p>
+<h2>Practical Tips for Setting Up Your Spell Checker</h2>
+<p>Here's how I configure mine for maximum usefulness without driving myself crazy:</p>
+<p>1. **Start with Code Spell Checker.** Install it, then add your project's custom words (like library names or abbreviations) to a `.cspell.json` file. This keeps your dictionary consistent across your team.</p>
+<p>2. **Add a grammar checker for documentation.** Use something like the <a href="https://belikenative.com/tools/text-simplifier/">text simplifier</a> tool on BeLikeNative to clean up README files and inline comments. It catches the stuff spell checkers miss—like run-on sentences or overly complex phrasing.</p>
+<p>3. **Configure file exclusions.** Don't let your spell checker scan `node_modules`, `dist`, or generated files. It'll slow you down and flag nonsense. Most extensions let you set glob patterns to ignore.</p>
+<p>4. **Enable multi-language support if needed.** If your project mixes English and another language, install the corresponding dictionary and set the language toggle in your settings.</p>
+<p>5. **Test in a web environment first.** Not all extensions behave the same in Codespaces vs vscode.dev. I learned that the hard way when an extension that worked flawlessly on desktop just refused to load in the browser.</p>
+<h2>The Verdict</h2>
+<p>For most people, Code Spell Checker is the best starting point. It's free, private, and works in every web-based VS Code environment I've tested. Pair it with a grammar tool for documentation, and you're covered.</p>
+<p>If you need multilingual support or heavy grammar checking, LTeX is the better choice—just be prepared for a slightly heavier resource footprint.</p>
+<p>And if you're in GitHub Codespaces and already paying for Copilot, try the built-in checker first. It might be enough.</p>
+<p>The key is to find something that fits your workflow without adding friction. A spell checker that slows you down or gives too many false positives isn't worth installing. But one that catches the occasional typo before it hits production? That's gold.</p>
+<h2>FAQ</h2>
+<p>**Can I use desktop VS Code extensions in browser-based VS Code?** Not always. Some extensions rely on native binaries or local file access that isn't available in web environments. Always check the extension's documentation for web support before installing.</p>
+<p>**Do these spell checkers slow down my editor?** Code Spell Checker is lightweight—I've never noticed lag. LTeX can be heavier, especially on large files. If performance is a concern, stick with the simpler option.</p>
+<p>**How do I add custom words to my spell checker?** Most extensions let you create a dictionary file (like `.cspell.json`) in your project root. You can also use the command palette to add words on the fly. This keeps your custom terms synced across your team.</p>
+<div class="footer">
+<p>Read the original at <a href="https://belikenative.com/best-spell-checker-vs-code-web-environments/">belikenative.com/best-spell-checker-vs-code-web-environments</a></p>
+<p><a href="https://belikenative.com">BeLikeNative</a> is a free Chrome extension for real-time grammar checking and writing improvement.</p>
+</div>
+</article>
+</body>
+</html>
